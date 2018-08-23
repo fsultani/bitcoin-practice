@@ -38,8 +38,32 @@ export default class MainApp extends Component {
     this.setState({ isOpen: false });
   };
 
+  handleSubmit = event => {
+    event.preventDefault();
+    this.setState({ loading: true });
+    this.getBitcoinData();
+  };
+
+  handleChange = address => {
+    this.setState({ bitcoinAddress: address });
+  };
+
+  handleError(err) {
+    if (err.response && err.response.data) {
+      this.setState({
+        isOpen: true,
+        errorMessage: err.resp.data
+      });
+    } else {
+      // If there's a network error, reload the app
+      localStorage.setItem('Error', true);
+      window.location.reload();
+    }
+  }
+
   refetchBitcoinData() {
-    setInterval(() => this.getBitcoinData(), 60000);
+    // Set refetch interval to 3 minutes to try to avoid a 429 error
+    setInterval(() => this.getBitcoinData(), 180000);
   }
 
   getBitcoinData() {
@@ -50,6 +74,7 @@ export default class MainApp extends Component {
         }`
       )
       .then(res => {
+        // console.log('res.data.addresses[0]\n', res.data.addresses[0])
         this.setState(
           {
             loading: false,
@@ -63,23 +88,25 @@ export default class MainApp extends Component {
         );
       })
       .catch(err => {
-        this.setState({
-          isOpen: true,
-          loading: false,
-          errorMessage: err.response.data
-        });
+        this.setState(
+          {
+            loading: false
+          },
+          () => this.handleError(err)
+        );
       });
   }
 
-  handleSubmit = event => {
-    event.preventDefault();
-    this.setState({ loading: true });
-    this.getBitcoinData();
-  };
-
-  handleChange = address => {
-    this.setState({ bitcoinAddress: address });
-  };
+  componentDidMount() {
+    // Check if the app was reloaded due to a network error and display error message
+    if (localStorage.getItem('Error')) {
+      this.setState({
+        isOpen: true,
+        errorMessage: 'Something went wrong'
+      });
+      localStorage.removeItem('Error');
+    }
+  }
 
   render() {
     const defaultOptions = {
