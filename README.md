@@ -1,7 +1,8 @@
 ## Installation
 
 - Clone with `git clone https://github.com/fsultani/bitcoin-practice.git`
-- `cd bitcoin-practice` and `npm start`
+- `cd bitcoin-practice`
+- `npm install`, then `npm start`
 - Testing can be done with `npm test`
 
 ## Usage
