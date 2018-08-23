@@ -17,7 +17,7 @@ const Container = styled.div`
   margin: 20px 0;
 `
 
-export default (props =>(
+export default (props => (
   <Container>
     <Paper>
     <Typography variant="title" align="center" color="textSecondary" component="p">

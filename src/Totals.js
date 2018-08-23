@@ -15,31 +15,25 @@ const Container = styled.div`
   margin: 20px 0;
 `
 
-class AllEmployees extends Component {
-  render() {
-    return (
-      <Container>
-        <Paper>
-          <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell>Total Received</TableCell>
-                <TableCell numeric>Total Sent</TableCell>
-                <TableCell numeric>Final Balance</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              <TableRow>
-                <TableCell component="th" scope="row">{this.props.totalReceived}</TableCell>
-                <TableCell numeric>{this.props.totalSent}</TableCell>
-                <TableCell numeric>{this.props.finalBalance}</TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-        </Paper>
-      </Container>
-    );
-  }
-}
-
-export default AllEmployees;
+export default (props => (
+  <Container>
+    <Paper>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>Total Received</TableCell>
+            <TableCell numeric>Total Sent</TableCell>
+            <TableCell numeric>Final Balance</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          <TableRow>
+            <TableCell component="th" scope="row">{props.totalReceived}</TableCell>
+            <TableCell numeric>{props.totalSent}</TableCell>
+            <TableCell numeric>{props.finalBalance}</TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+    </Paper>
+  </Container>
+))

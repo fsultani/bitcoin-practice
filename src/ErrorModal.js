@@ -18,28 +18,22 @@ const ModalContainer = styled.div`
   text-align: center;
 `
 
-class ErrorModal extends Component {
-  render() {
-    return (
-      <Modal
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-        open={this.props.isOpen}
-        onClose={this.props.handleClose}
-      >
-        <ModalContainer>
-          <Typography variant="title" id="modal-title">
-            {this.props.errorMessage}
-          </Typography>
-          <Typography variant="subheading" id="simple-modal-description">
-            Please try again.
-          </Typography>
-          <Button onClick={this.props.handleClose} style={{textTransform: 'unset', border: '1px solid #727272'}}>Close
-          </Button>
-        </ModalContainer>
-      </Modal>
-    );
-  }
-}
-
-export default ErrorModal;
+export default (props => (
+  <Modal
+    aria-labelledby="simple-modal-title"
+    aria-describedby="simple-modal-description"
+    open={props.isOpen}
+    onClose={props.handleClose}
+  >
+    <ModalContainer>
+      <Typography variant="title" id="modal-title">
+        {props.errorMessage}
+      </Typography>
+      <Typography variant="subheading" id="simple-modal-description">
+        Please try again.
+      </Typography>
+      <Button onClick={props.handleClose} style={{textTransform: 'unset', border: '1px solid #727272'}}>Close
+      </Button>
+    </ModalContainer>
+  </Modal>
+))
