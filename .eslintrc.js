@@ -12,13 +12,13 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: "module"
   },
+  parser: "babel-eslint",
   plugins: ["react"],
   rules: {
     "react/jsx-uses-vars": "error",
     "react/jsx-uses-react": "error",
     indent: ["error", 2],
     "linebreak-style": ["error", "unix"],
-    quotes: ["error", "double"],
-    semi: ["error", "always"]
+    quotes: ["error", "single"]
   }
 };

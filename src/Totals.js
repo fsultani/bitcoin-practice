@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 import {
   Table,
@@ -8,7 +8,7 @@ import {
   TableHead,
   TableRow,
   Paper
-} from "@material-ui/core";
+} from '@material-ui/core';
 
 const Container = styled.div`
   width: 100%;

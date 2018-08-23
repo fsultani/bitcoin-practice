@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import moment from 'moment'
+import React from 'react';
+import styled from 'styled-components';
+import moment from 'moment';
 
 import {
   Table,
@@ -9,26 +9,41 @@ import {
   TableHead,
   TableRow,
   Paper,
-  Typography,
+  Typography
 } from '@material-ui/core';
 
 const Container = styled.div`
   width: 100%;
   margin: 20px 0;
-`
+`;
 
-export default (props => (
+export default props => (
   <Container>
     <Paper>
-    <Typography variant="title" align="center" color="textSecondary" component="p">
-      Recent Transactions
-    </Typography>
-    <Typography variant="subheading" align="center" color="primary" component="p">
-      {props.displayAddress && `Address: ${props.displayAddress}`}
-    </Typography>
-    <Typography variant="subheading" align="center" color="textSecondary" component="p">
-      {props.displayAddress && `Transactions will update every minute`}
-    </Typography>
+      <Typography
+        variant="title"
+        align="center"
+        color="textSecondary"
+        component="p"
+      >
+        Recent Transactions
+      </Typography>
+      <Typography
+        variant="subheading"
+        align="center"
+        color="primary"
+        component="p"
+      >
+        {props.displayAddress && `Address: ${props.displayAddress}`}
+      </Typography>
+      <Typography
+        variant="subheading"
+        align="center"
+        color="textSecondary"
+        component="p"
+      >
+        {props.displayAddress && 'Transactions will update every minute'}
+      </Typography>
       <Table>
         <TableHead>
           <TableRow>
@@ -42,10 +57,10 @@ export default (props => (
             return (
               <TableRow key={transaction.tx_index}>
                 <TableCell component="th" scope="row">
-                  {moment(transaction.time*1000)._d.toString()}
+                  {moment(transaction.time * 1000)._d.toString()}
                 </TableCell>
-                <TableCell numeric>{transaction.result/100000000}</TableCell>
-                <TableCell numeric>{transaction.balance/100000000}</TableCell>
+                <TableCell numeric>{transaction.result / 100000000}</TableCell>
+                <TableCell numeric>{transaction.balance / 100000000}</TableCell>
               </TableRow>
             );
           })}
@@ -53,4 +68,4 @@ export default (props => (
       </Table>
     </Paper>
   </Container>
-))
+);
