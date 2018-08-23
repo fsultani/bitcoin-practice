@@ -21,7 +21,7 @@ export default props => (
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>Total-Received</TableCell>
+            <TableCell>Total Received</TableCell>
             <TableCell numeric>Total Sent</TableCell>
             <TableCell numeric>Final Balance</TableCell>
           </TableRow>
