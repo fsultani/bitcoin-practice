@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 import {
   Table,
@@ -7,15 +7,15 @@ import {
   TableBody,
   TableHead,
   TableRow,
-  Paper,
-} from '@material-ui/core';
+  Paper
+} from "@material-ui/core";
 
 const Container = styled.div`
   width: 100%;
   margin: 20px 0;
-`
+`;
 
-export default (props => (
+export default props => (
   <Container>
     <Paper>
       <Table>
@@ -28,7 +28,9 @@ export default (props => (
         </TableHead>
         <TableBody>
           <TableRow>
-            <TableCell component="th" scope="row">{props.totalReceived}</TableCell>
+            <TableCell component="th" scope="row">
+              {props.totalReceived}
+            </TableCell>
             <TableCell numeric>{props.totalSent}</TableCell>
             <TableCell numeric>{props.finalBalance}</TableCell>
           </TableRow>
@@ -36,4 +38,4 @@ export default (props => (
       </Table>
     </Paper>
   </Container>
-))
+);

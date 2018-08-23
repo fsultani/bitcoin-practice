@@ -14,7 +14,8 @@ module.exports = {
   },
   plugins: ["react"],
   rules: {
-    "react/jsx-uses-vars": ["error"],
+    "react/jsx-uses-vars": "error",
+    "react/jsx-uses-react": "error",
     indent: ["error", 2],
     "linebreak-style": ["error", "unix"],
     quotes: ["error", "double"],
