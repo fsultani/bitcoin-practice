@@ -38,10 +38,11 @@ export default class MainApp extends Component {
     this.setState({ isOpen: false })
   }
 
-  handleSubmit = event => {
-    event.preventDefault();
-    this.setState({ loading: true })
+  refetchBitcoinData() {
+    setInterval(() => this.getBitcoinData(), 60000)
+  }
 
+  getBitcoinData() {
     axios.get(`https://blockchain.info/multiaddr?cors=true&active=${this.state.bitcoinAddress}`)
     .then(res => {
       this.setState({
@@ -50,7 +51,8 @@ export default class MainApp extends Component {
         total_sent: res.data.addresses[0].total_sent/100000000,
         final_balance: res.data.addresses[0].final_balance/100000000,
         transactions: res.data.txs,
-      })
+        displayAddress: this.state.bitcoinAddress,
+      }, () => this.refetchBitcoinData())
     })
     .catch(err => {
       this.setState({
@@ -59,6 +61,12 @@ export default class MainApp extends Component {
         errorMessage: err.response.data,
       })
     })
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+    this.setState({ loading: true })
+    this.getBitcoinData()
   }
 
   handleChange = address => {
@@ -109,6 +117,7 @@ export default class MainApp extends Component {
 
             <RecentTransactions
               transactions={this.state.transactions}
+              displayAddress={this.state.displayAddress}
             />
           </div>
         }

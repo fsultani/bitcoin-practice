@@ -21,8 +21,14 @@ export default class RecentTransactions extends Component {
     return (
       <Container>
         <Paper>
-        <Typography variant="subheading" align="center" color="textSecondary" component="p">
+        <Typography variant="title" align="center" color="textSecondary" component="p">
           Recent Transactions
+        </Typography>
+        <Typography variant="subheading" align="center" color="primary" component="p">
+          {this.props.displayAddress && `Address: ${this.props.displayAddress}`}
+        </Typography>
+        <Typography variant="subheading" align="center" color="textSecondary" component="p">
+          {this.props.displayAddress && `Transactions will update every minute`}
         </Typography>
           <Table>
             <TableHead>
