@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-
 import Lottie from 'react-lottie';
 import * as animationData from './loader.json';
 import axios from 'axios';
+import { Container, Row, Col } from 'react-grid-system';
 
 import InputForm from './InputForm';
 import Totals from './Totals';
@@ -11,7 +11,7 @@ import RecentTransactions from './RecentTransactions';
 import ErrorModal from './ErrorModal';
 
 const Wrapper = styled.div`
-  width: 800px;
+  width: 100%;
   margin: 0 auto;
 `;
 
@@ -116,24 +116,34 @@ export default class MainApp extends Component {
         )}
 
         {!this.state.loading && (
-          <div>
-            <InputForm
-              onChange={this.handleChange}
-              handleSubmit={this.handleSubmit}
-              value={this.state.value}
-            />
-
-            <Totals
-              totalReceived={this.state.total_received}
-              totalSent={this.state.total_sent}
-              finalBalance={this.state.final_balance}
-            />
-
-            <RecentTransactions
-              transactions={this.state.transactions}
-              displayAddress={this.state.displayAddress}
-            />
-          </div>
+          <Container>
+            <Row>
+              <Col md={12} lg={12}>
+                <InputForm
+                  onChange={this.handleChange}
+                  handleSubmit={this.handleSubmit}
+                  value={this.state.value}
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col md={12} lg={12}>
+                <Totals
+                  totalReceived={this.state.total_received}
+                  totalSent={this.state.total_sent}
+                  finalBalance={this.state.final_balance}
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col md={12} lg={12}>
+                <RecentTransactions
+                  transactions={this.state.transactions}
+                  displayAddress={this.state.displayAddress}
+                />
+              </Col>
+            </Row>
+          </Container>
         )}
       </Wrapper>
     );
