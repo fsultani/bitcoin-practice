@@ -2,6 +2,7 @@
   "name": "bitcoin-practice",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://fsultani.github.io/bitcoin-practice",
   "dependencies": {
     "@material-ui/core": "^1.5.1",
     "axios": "^0.18.0",
@@ -18,13 +19,15 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "enzyme": "^3.4.4",
     "enzyme-adapter-react-16": "^1.2.0",
     "enzyme-to-json": "^3.3.4",
     "eslint": "^5.4.0",
+    "gh-pages": "^1.2.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.2.2",
     "prettier": "^1.14.2"
