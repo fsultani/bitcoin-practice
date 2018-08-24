@@ -51,22 +51,22 @@ export default class MainApp extends Component {
   handleError(err) {
     if (err.response && err.response.data) {
       this.setState({
+        loading: false,
         isOpen: true,
-        errorMessage: err.resp.data
+        errorMessage: err.response.data
       });
     } else {
-      // If there's a network error, reload the app
-      localStorage.setItem('Error', true);
+      /* If there's a network error, reload the app */
       window.location.reload();
     }
   }
 
-  refetchBitcoinData() {
-    // Set refetch interval to 3 minutes to try to avoid a 429 error
-    setInterval(() => this.getBitcoinData(), 180000);
-  }
+  refetchBitcoinData = () => {
+    // Set refetch interval to 3 minutes to try to avoid rate-limiting
+    setInterval(this.getBitcoinData, 180000);
+  };
 
-  getBitcoinData() {
+  getBitcoinData = () => {
     axios
       .get(
         `https://blockchain.info/multiaddr?cors=true&active=${
@@ -74,7 +74,6 @@ export default class MainApp extends Component {
         }`
       )
       .then(res => {
-        // console.log('res.data.addresses[0]\n', res.data.addresses[0])
         this.setState(
           {
             loading: false,
@@ -88,25 +87,9 @@ export default class MainApp extends Component {
         );
       })
       .catch(err => {
-        this.setState(
-          {
-            loading: false
-          },
-          () => this.handleError(err)
-        );
+        this.handleError(err);
       });
-  }
-
-  componentDidMount() {
-    // Check if the app was reloaded due to a network error and display error message
-    if (localStorage.getItem('Error')) {
-      this.setState({
-        isOpen: true,
-        errorMessage: 'Something went wrong'
-      });
-      localStorage.removeItem('Error');
-    }
-  }
+  };
 
   render() {
     const defaultOptions = {

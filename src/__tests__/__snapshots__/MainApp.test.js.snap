@@ -1,429 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`returns a valid address 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <MainApp
-    handleChange={[Function]}
-    handleSubmit={[Function]}
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": Array [
-        false,
-        <Unknown
-          errorMessage="null"
-          handleClose={[Function]}
-          isOpen={false}
-/>,
-        <div>
-          <InputForm
-                    handleSubmit={[Function]}
-                    onChange={[Function]}
-                    value={undefined}
-          />
-          <Unknown
-                    finalBalance={966.76986952}
-                    totalReceived={1571174.22487431}
-                    totalSent={1570207.45500479}
-          />
-          <Unknown
-                    displayAddress="1J37CY8hcdUXQ1KfBhMCsUVafa8XjDsdCn"
-                    transactions={
-                              Array [
-                                        Object {
-                                          "balance": 96676986952,
-                                          "result": 39989776,
-                                          "time": 1535008717,
-                                        },
-                                        Object {
-                                          "balance": 96636997176,
-                                          "result": 1499989776,
-                                          "time": 1535008682,
-                                        },
-                                        Object {
-                                          "balance": 95137007400,
-                                          "result": 2716966,
-                                          "time": 1535008455,
-                                        },
-                                        Object {
-                                          "balance": 95134290434,
-                                          "result": -218137,
-                                          "time": 1535008077,
-                                        },
-                                        Object {
-                                          "balance": 95134508571,
-                                          "result": 14274049,
-                                          "time": 1535006582,
-                                        },
-                                      ]
-                    }
-          />
-</div>,
-      ],
-    },
-    "ref": null,
-    "rendered": Array [
-      false,
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "errorMessage": "null",
-          "handleClose": [Function],
-          "isOpen": false,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <InputForm
-              handleSubmit={[Function]}
-              onChange={[Function]}
-              value={undefined}
-/>,
-            <Unknown
-              finalBalance={966.76986952}
-              totalReceived={1571174.22487431}
-              totalSent={1570207.45500479}
-/>,
-            <Unknown
-              displayAddress="1J37CY8hcdUXQ1KfBhMCsUVafa8XjDsdCn"
-              transactions={
-                            Array [
-                                          Object {
-                                            "balance": 96676986952,
-                                            "result": 39989776,
-                                            "time": 1535008717,
-                                          },
-                                          Object {
-                                            "balance": 96636997176,
-                                            "result": 1499989776,
-                                            "time": 1535008682,
-                                          },
-                                          Object {
-                                            "balance": 95137007400,
-                                            "result": 2716966,
-                                            "time": 1535008455,
-                                          },
-                                          Object {
-                                            "balance": 95134290434,
-                                            "result": -218137,
-                                            "time": 1535008077,
-                                          },
-                                          Object {
-                                            "balance": 95134508571,
-                                            "result": 14274049,
-                                            "time": 1535006582,
-                                          },
-                                        ]
-              }
-/>,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
+<styled.div>
+  <Component
+    errorMessage="null"
+    handleClose={[Function]}
+    isOpen={false}
+  />
+  <div>
+    <InputForm
+      handleSubmit={[Function]}
+      onChange={[Function]}
+    />
+    <Component
+      finalBalance={966.76986952}
+      totalReceived={1571174.22487431}
+      totalSent={1570207.45500479}
+    />
+    <Component
+      displayAddress="1J37CY8hcdUXQ1KfBhMCsUVafa8XjDsdCn"
+      transactions={
+        Array [
           Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "handleSubmit": [Function],
-              "onChange": [Function],
-              "value": undefined,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "balance": 96676986952,
+            "result": 39989776,
+            "time": 1535008717,
           },
           Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "finalBalance": 966.76986952,
-              "totalReceived": 1571174.22487431,
-              "totalSent": 1570207.45500479,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "balance": 96636997176,
+            "result": 1499989776,
+            "time": 1535008682,
           },
           Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "displayAddress": "1J37CY8hcdUXQ1KfBhMCsUVafa8XjDsdCn",
-              "transactions": Array [
-                Object {
-                  "balance": 96676986952,
-                  "result": 39989776,
-                  "time": 1535008717,
-                },
-                Object {
-                  "balance": 96636997176,
-                  "result": 1499989776,
-                  "time": 1535008682,
-                },
-                Object {
-                  "balance": 95137007400,
-                  "result": 2716966,
-                  "time": 1535008455,
-                },
-                Object {
-                  "balance": 95134290434,
-                  "result": -218137,
-                  "time": 1535008077,
-                },
-                Object {
-                  "balance": 95134508571,
-                  "result": 14274049,
-                  "time": 1535006582,
-                },
-              ],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "balance": 95137007400,
+            "result": 2716966,
+            "time": 1535008455,
           },
-        ],
-        "type": "div",
-      },
-    ],
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": Array [
-          false,
-          <Unknown
-            errorMessage="null"
-            handleClose={[Function]}
-            isOpen={false}
-/>,
-          <div>
-            <InputForm
-                        handleSubmit={[Function]}
-                        onChange={[Function]}
-                        value={undefined}
-            />
-            <Unknown
-                        finalBalance={966.76986952}
-                        totalReceived={1571174.22487431}
-                        totalSent={1570207.45500479}
-            />
-            <Unknown
-                        displayAddress="1J37CY8hcdUXQ1KfBhMCsUVafa8XjDsdCn"
-                        transactions={
-                                    Array [
-                                                Object {
-                                                  "balance": 96676986952,
-                                                  "result": 39989776,
-                                                  "time": 1535008717,
-                                                },
-                                                Object {
-                                                  "balance": 96636997176,
-                                                  "result": 1499989776,
-                                                  "time": 1535008682,
-                                                },
-                                                Object {
-                                                  "balance": 95137007400,
-                                                  "result": 2716966,
-                                                  "time": 1535008455,
-                                                },
-                                                Object {
-                                                  "balance": 95134290434,
-                                                  "result": -218137,
-                                                  "time": 1535008077,
-                                                },
-                                                Object {
-                                                  "balance": 95134508571,
-                                                  "result": 14274049,
-                                                  "time": 1535006582,
-                                                },
-                                              ]
-                        }
-            />
-</div>,
-        ],
-      },
-      "ref": null,
-      "rendered": Array [
-        false,
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "errorMessage": "null",
-            "handleClose": [Function],
-            "isOpen": false,
+          Object {
+            "balance": 95134290434,
+            "result": -218137,
+            "time": 1535008077,
           },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <InputForm
-                handleSubmit={[Function]}
-                onChange={[Function]}
-                value={undefined}
-/>,
-              <Unknown
-                finalBalance={966.76986952}
-                totalReceived={1571174.22487431}
-                totalSent={1570207.45500479}
-/>,
-              <Unknown
-                displayAddress="1J37CY8hcdUXQ1KfBhMCsUVafa8XjDsdCn"
-                transactions={
-                                Array [
-                                                Object {
-                                                  "balance": 96676986952,
-                                                  "result": 39989776,
-                                                  "time": 1535008717,
-                                                },
-                                                Object {
-                                                  "balance": 96636997176,
-                                                  "result": 1499989776,
-                                                  "time": 1535008682,
-                                                },
-                                                Object {
-                                                  "balance": 95137007400,
-                                                  "result": 2716966,
-                                                  "time": 1535008455,
-                                                },
-                                                Object {
-                                                  "balance": 95134290434,
-                                                  "result": -218137,
-                                                  "time": 1535008077,
-                                                },
-                                                Object {
-                                                  "balance": 95134508571,
-                                                  "result": 14274049,
-                                                  "time": 1535006582,
-                                                },
-                                              ]
-                }
-/>,
-            ],
+          Object {
+            "balance": 95134508571,
+            "result": 14274049,
+            "time": 1535006582,
           },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "handleSubmit": [Function],
-                "onChange": [Function],
-                "value": undefined,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "finalBalance": 966.76986952,
-                "totalReceived": 1571174.22487431,
-                "totalSent": 1570207.45500479,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "displayAddress": "1J37CY8hcdUXQ1KfBhMCsUVafa8XjDsdCn",
-                "transactions": Array [
-                  Object {
-                    "balance": 96676986952,
-                    "result": 39989776,
-                    "time": 1535008717,
-                  },
-                  Object {
-                    "balance": 96636997176,
-                    "result": 1499989776,
-                    "time": 1535008682,
-                  },
-                  Object {
-                    "balance": 95137007400,
-                    "result": 2716966,
-                    "time": 1535008455,
-                  },
-                  Object {
-                    "balance": 95134290434,
-                    "result": -218137,
-                    "time": 1535008077,
-                  },
-                  Object {
-                    "balance": 95134508571,
-                    "result": 14274049,
-                    "time": 1535006582,
-                  },
-                ],
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-          ],
-          "type": "div",
-        },
-      ],
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getSnapshotBeforeUpdate": true,
-        },
-      },
-    },
-    "attachTo": undefined,
-    "hydrateIn": undefined,
-  },
-}
+        ]
+      }
+    />
+  </div>
+</styled.div>
 `;
 
 exports[`returns an invalid address 1`] = `
@@ -465,7 +92,7 @@ ShallowWrapper {
                     totalSent={null}
           />
           <Unknown
-                    displayAddress="1J37CY8hcdUXQ1KfBhMCsUVafa8XjDsdCd"
+                    displayAddress="1J37CY8hcdUXQ1KfBhMCsUVafa8XjDsdCn"
                     transactions={Array []}
           />
 </div>,
@@ -504,7 +131,7 @@ ShallowWrapper {
               totalSent={null}
 />,
             <Unknown
-              displayAddress="1J37CY8hcdUXQ1KfBhMCsUVafa8XjDsdCd"
+              displayAddress="1J37CY8hcdUXQ1KfBhMCsUVafa8XjDsdCn"
               transactions={Array []}
 />,
           ],
@@ -542,7 +169,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "displayAddress": "1J37CY8hcdUXQ1KfBhMCsUVafa8XjDsdCd",
+              "displayAddress": "1J37CY8hcdUXQ1KfBhMCsUVafa8XjDsdCn",
               "transactions": Array [],
             },
             "ref": null,
@@ -580,7 +207,7 @@ ShallowWrapper {
                         totalSent={null}
             />
             <Unknown
-                        displayAddress="1J37CY8hcdUXQ1KfBhMCsUVafa8XjDsdCd"
+                        displayAddress="1J37CY8hcdUXQ1KfBhMCsUVafa8XjDsdCn"
                         transactions={Array []}
             />
 </div>,
@@ -619,7 +246,7 @@ ShallowWrapper {
                 totalSent={null}
 />,
               <Unknown
-                displayAddress="1J37CY8hcdUXQ1KfBhMCsUVafa8XjDsdCd"
+                displayAddress="1J37CY8hcdUXQ1KfBhMCsUVafa8XjDsdCn"
                 transactions={Array []}
 />,
             ],
@@ -657,7 +284,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "displayAddress": "1J37CY8hcdUXQ1KfBhMCsUVafa8XjDsdCd",
+                "displayAddress": "1J37CY8hcdUXQ1KfBhMCsUVafa8XjDsdCn",
                 "transactions": Array [],
               },
               "ref": null,

@@ -42,7 +42,7 @@ export default props => (
         color="textSecondary"
         component="p"
       >
-        {props.displayAddress && 'Transactions will update every minute'}
+        {props.displayAddress && 'Transactions will update every 3 minutes'}
       </Typography>
       <Table>
         <TableHead>
