@@ -8,7 +8,7 @@
 ## Usage
 
 - Search for a bitcoin address using the input field at the top of the page
-- If the address is valid, its info is returned, and data is auto updated every minute
+- If the address is valid, its info is returned, and data is auto updated every 3 minutes
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
