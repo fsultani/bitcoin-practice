@@ -15,24 +15,30 @@ const Container = styled.div`
   margin: 20px 0;
 `;
 
+const TableCellContainer = styled(TableCell)`
+  max-width: 0;
+`;
+
 export default props => (
   <Container>
     <Paper>
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>Total Received</TableCell>
-            <TableCell numeric>Total Sent</TableCell>
-            <TableCell numeric>Final Balance</TableCell>
+            <TableCellContainer>Total Received</TableCellContainer>
+            <TableCellContainer numeric>Total Sent</TableCellContainer>
+            <TableCellContainer numeric>Final Balance</TableCellContainer>
           </TableRow>
         </TableHead>
         <TableBody>
           <TableRow>
-            <TableCell component="th" scope="row">
+            <TableCellContainer component="th" scope="row">
               {props.totalReceived}
-            </TableCell>
-            <TableCell numeric>{props.totalSent}</TableCell>
-            <TableCell numeric>{props.finalBalance}</TableCell>
+            </TableCellContainer>
+            <TableCellContainer numeric>{props.totalSent}</TableCellContainer>
+            <TableCellContainer numeric>
+              {props.finalBalance}
+            </TableCellContainer>
           </TableRow>
         </TableBody>
       </Table>
