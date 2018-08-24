@@ -1,47 +1,54 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import {
-  Table,
-  TableCell,
-  TableBody,
-  TableHead,
-  TableRow,
-  Paper
-} from '@material-ui/core';
+import { Grid, Card, CardContent, Typography, Paper } from '@material-ui/core';
 
 const Container = styled.div`
-  width: 100%;
-  margin: 20px 0;
+  margin-top: 20px;
 `;
 
-const TableCellContainer = styled(TableCell)`
-  max-width: 0;
+const CardContainer = styled(Card)`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 `;
+
+const CardContentContainer = styled(CardContent)`
+  flex-grow: 1;
+`;
+
+const cards = [
+  {
+    description: 'Total Received',
+    value: 'totalReceived'
+  },
+  {
+    description: 'Total Sent',
+    value: 'totalSent'
+  },
+  {
+    description: 'Final Balance',
+    value: 'finalBalance'
+  }
+];
 
 export default props => (
   <Container>
-    <Paper>
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableCellContainer>Total Received</TableCellContainer>
-            <TableCellContainer numeric>Total Sent</TableCellContainer>
-            <TableCellContainer numeric>Final Balance</TableCellContainer>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          <TableRow>
-            <TableCellContainer component="th" scope="row">
-              {props.totalReceived}
-            </TableCellContainer>
-            <TableCellContainer numeric>{props.totalSent}</TableCellContainer>
-            <TableCellContainer numeric>
-              {props.finalBalance}
-            </TableCellContainer>
-          </TableRow>
-        </TableBody>
-      </Table>
-    </Paper>
+    <Grid container spacing={40}>
+      {cards.map(card => (
+        <Grid item key={card} sm={6} md={4} lg={3}>
+          <Paper>
+            <CardContainer>
+              <CardContentContainer>
+                <Typography gutterBottom variant="headline" component="h2">
+                  {card.description}
+                </Typography>
+                <Typography>{props[card.value]}</Typography>
+              </CardContentContainer>
+            </CardContainer>
+          </Paper>
+        </Grid>
+      ))}
+    </Grid>
   </Container>
 );
