@@ -104,7 +104,7 @@ export default class MainApp extends Component {
 
     return (
       <Wrapper>
-        <Ad className="GoogleAdsense" />
+        <Ad />
         {this.state.loading && (
           <Lottie options={defaultOptions} height={400} width={400} />
         )}

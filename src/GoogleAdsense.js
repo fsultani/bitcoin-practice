@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 
 export default class Ad extends Component {
   componentDidMount() {
-    window.adsbygoogle = window.adsbygoogle || [].push({});
+    (window.adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: 'ca-pub-7964699062377847',
+      enable_page_level_ads: true,
+    });
   }
 
   render() {
