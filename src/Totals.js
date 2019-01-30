@@ -36,7 +36,7 @@ export default props => (
   <Container>
     <Grid container spacing={40}>
       {cards.map(card => (
-        <Grid item key={card} sm={6} md={4} lg={3}>
+        <Grid item key={card.value} sm={6} md={4} lg={3}>
           <Paper>
             <CardContainer>
               <CardContentContainer>
