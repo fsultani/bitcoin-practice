@@ -9,6 +9,7 @@ import InputForm from './InputForm';
 import Totals from './Totals';
 import RecentTransactions from './RecentTransactions';
 import ErrorModal from './ErrorModal';
+// import Ad from './GoogleAdsense';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -26,7 +27,7 @@ export default class MainApp extends Component {
       final_balance: null,
       transactions: [],
       errorMessage: 'null',
-      isOpen: false
+      isOpen: false,
     };
   }
 
@@ -53,7 +54,7 @@ export default class MainApp extends Component {
       this.setState({
         loading: false,
         isOpen: true,
-        errorMessage: err.response.data
+        errorMessage: err.response.data,
       });
     } else {
       /* If there's a network error, reload the app */
@@ -69,9 +70,7 @@ export default class MainApp extends Component {
   getBitcoinData = () => {
     axios
       .get(
-        `https://blockchain.info/multiaddr?cors=true&active=${
-          this.state.bitcoinAddress
-        }`
+        `https://blockchain.info/multiaddr?cors=true&active=${this.state.bitcoinAddress}`
       )
       .then(res => {
         this.setState(
@@ -81,7 +80,7 @@ export default class MainApp extends Component {
             total_sent: res.data.addresses[0].total_sent / 100000000,
             final_balance: res.data.addresses[0].final_balance / 100000000,
             transactions: res.data.txs,
-            displayAddress: this.state.bitcoinAddress
+            displayAddress: this.state.bitcoinAddress,
           },
           () => this.refetchBitcoinData()
         );
@@ -97,8 +96,8 @@ export default class MainApp extends Component {
       autoplay: true,
       animationData: animationData,
       rendererSettings: {
-        preserveAspectRatio: 'xMidYMid slice'
-      }
+        preserveAspectRatio: 'xMidYMid slice',
+      },
     };
 
     return (
