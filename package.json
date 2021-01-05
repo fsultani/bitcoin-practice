@@ -5,7 +5,7 @@
   "homepage": "http://fsultani.github.io/bitcoin-practice",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "moment": "^2.27.0",
     "react": "^16.4.2",
     "react-adsense": "0.0.6",
