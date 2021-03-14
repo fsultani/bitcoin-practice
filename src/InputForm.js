@@ -50,7 +50,7 @@ export default class InputForm extends Component {
           variant="contained"
           color="primary"
         >
-          Search Here
+          Search
         </SubmitButton>
       </FormContainer>
     );
