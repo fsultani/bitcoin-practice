@@ -8,16 +8,23 @@ import {
   InputLabel,
 } from '@material-ui/core';
 
+const FormContainer = styled.form`
+  display: flex;
+  align-items: flex-end;
+`;
+
 const InputContainer = styled(Input)`
   margin-right: 50px;
-`
+`;
 
 const FormControlContainer = styled(FormControl)`
   width: 75%;
-`
+`;
+
 const SubmitButton = styled(Button)`
   width: 25%;
-`
+  height: 50%;
+`;
 
 export default class InputForm extends Component {
   handleChange = event => {
@@ -26,7 +33,7 @@ export default class InputForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.props.handleSubmit}>
+      <FormContainer onSubmit={this.props.handleSubmit}>
         <FormControlContainer margin="normal">
           <InputLabel htmlFor="address">Enter Bitcoin address</InputLabel>
           <InputContainer
@@ -40,12 +47,12 @@ export default class InputForm extends Component {
         </FormControlContainer>
         <SubmitButton
           type="submit"
-          variant="raised"
+          variant="contained"
           color="primary"
         >
           Search
         </SubmitButton>
-      </form>
+      </FormContainer>
     );
   }
 }
